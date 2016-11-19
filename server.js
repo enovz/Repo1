@@ -10,6 +10,7 @@ const server = restify.createServer({
     name: "node API"
 });
 
+server.use(restify.CORS());
 userRoutes(server,userController);
 
 server.listen(port, ()=>{
